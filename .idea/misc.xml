@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/drawable/bg_button_extra_rounded.xml" value="0.254" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/drawable/bg_button_rounded.xml" value="0.254" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/drawable/bg_edit_text_rounded.xml" value="0.254" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/drawable/ic_launcher_background.xml" value="0.254" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/drawable/round.xml" value="0.254" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/drawable/rounded_edittext.xml" value="0.254" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/checkout_layout_fragment.xml" value="0.3078947368421053" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/checkout_layout_item.xml" value="0.3078947368421053" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/detail_product_layout_fragment.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/login_layout_fragment.xml" value="0.3424759080800593" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/product_list_layout_fragment.xml" value="0.20942883046237534" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/product_list_layout_item.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/register_layout_fragment.xml" value="0.3078947368421053" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/app/src/main/res/layout/root.xml" value="0.3078947368421053" />
+        <entry key="..\:/Users/1255/AndroidStudioProjects/Penjualan/common/src/main/res/layout/dummy.xml" value="0.358695652173913" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
