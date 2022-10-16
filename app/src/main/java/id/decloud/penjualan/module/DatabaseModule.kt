@@ -16,15 +16,12 @@ class DatabaseModule {
 
     @Provides
     @Singleton
-    fun providesPenjualanDatabase(@ApplicationContext context: Context) = PenjualanDatabase.getInstance(context)
+    fun providesPenjualanDatabase(@ApplicationContext context: Context) =
+        PenjualanDatabase.getInstance(context)
 
     @Provides
     @Singleton
-    fun providesLoginDao(penjualanDatabase: PenjualanDatabase) = penjualanDatabase.loginDao()
-
-    @Provides
-    @Singleton
-    fun providesProductDao(penjualanDatabase: PenjualanDatabase) = penjualanDatabase.productDao()
+    fun providesCartDao(penjualanDatabase: PenjualanDatabase) = penjualanDatabase.cartDao()
 
     @Provides
     @Singleton

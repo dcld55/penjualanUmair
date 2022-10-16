@@ -5,7 +5,7 @@
     <data>
         <variable
             name="data"
-            type="id.decloud.common.entity.ProductEntity" />
+            type="id.decloud.common.entity.api.product.Content" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,7 +45,7 @@
                     android:layout_marginTop="14dp"
                     android:layout_toEndOf="@id/product_image"
                     android:fontFamily="@font/mulish_bold"
-                    android:text="@{data.productName}"
+                    android:text="@{data.name}"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />

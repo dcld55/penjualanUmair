@@ -45,28 +45,28 @@ abstract class BaseFragment<VM : BaseViewModel, Binding : ViewDataBinding> : Fra
         }
     }
 
-//    fun <T> observeResponseData(
-//        data: MutableLiveData<AppResponse<T>>,
-//        success: ((T) -> Unit),
-//        error: ((Throwable) -> Unit)?,
-//        loading: (() -> Unit)? = {}
-//    ) {
-//        data.observe(this){response->
-//            when(response){
-//                is AppResponse.AppResponseSuccess -> {
-//                    success.invoke(response.data)
-//                }
-//                is AppResponse.AppResponseError -> {
-//                    response.e?.let {
-//                        error?.invoke(it)
-//                    }
-//                }
-//                is AppResponse.AppResponseLoading->{
-//                    loading?.invoke()
-//                }
-//            }
-//        }
-//
-//    }
+    fun <T> observeResponseData(
+        data: MutableLiveData<AppResponse<T>>,
+        success: ((T) -> Unit),
+        error: ((Throwable) -> Unit)?,
+        loading: (() -> Unit)? = {}
+    ) {
+        data.observe(this){response->
+            when(response){
+                is AppResponse.AppResponseSuccess -> {
+                    success.invoke(response.data)
+                }
+                is AppResponse.AppResponseError -> {
+                    response.e?.let {
+                        error?.invoke(it)
+                    }
+                }
+                is AppResponse.AppResponseLoading->{
+                    loading?.invoke()
+                }
+            }
+        }
+
+    }
 
 }

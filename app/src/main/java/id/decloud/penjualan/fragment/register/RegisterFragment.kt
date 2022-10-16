@@ -3,7 +3,7 @@ package id.decloud.penjualan.fragment.register
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import id.decloud.common.entity.LoginEntity
+import id.decloud.common.request.LoginRequest
 import id.decloud.common.ui.BaseFragment
 import id.decloud.penjualan.R
 import id.decloud.penjualan.databinding.RegisterLayoutFragmentBinding
@@ -22,8 +22,8 @@ class RegisterFragment : BaseFragment<RegisterViewModel, RegisterLayoutFragmentB
                 Toast.makeText(context, "Username dan Password harus di-Isi", Toast.LENGTH_SHORT)
                     .show()
             } else {
-                vm.register(
-                    LoginEntity(
+                vm.getRegister(
+                    LoginRequest(
                         binding.user.text.toString(),
                         binding.password.text.toString()
                     )

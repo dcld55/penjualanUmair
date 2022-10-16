@@ -11,4 +11,7 @@ fun DependencyHandler.androidX() {
     implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
     implementation("androidx.work:work-runtime-ktx:2.7.0")
+
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
 }

@@ -15,7 +15,7 @@ android {
     defaultConfig {
         applicationId = "id.decloud.penjualan"
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
 

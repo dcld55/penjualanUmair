@@ -1,4 +1,4 @@
-package id.decloud.common.entity
+package id.decloud.common.entity.room_table
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -15,7 +15,7 @@ class TransactionHeaderEntity(
     @field:ColumnInfo(name = "user")
     val user: String,
     @field:ColumnInfo(name = "total")
-    val total: Int,
+    val total: Double,
     @field:ColumnInfo(name = "date")
     val date: String
 ) {

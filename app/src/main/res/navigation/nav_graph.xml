@@ -22,5 +22,31 @@
     <fragment
         android:id="@+id/productFragment"
         android:name="id.decloud.penjualan.fragment.product.ProductFragment"
-        android:label="ProductFragment" />
+        android:label="ProductFragment" >
+        <action
+            android:id="@+id/toDetail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/toDummy"
+            app:destination="@id/dummy" />
+        <action
+            android:id="@+id/toCart"
+            app:destination="@id/checkoutFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="id.decloud.penjualan.fragment.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument android:name="oneContent"
+            app:argType="id.decloud.common.entity.api.product.Content" />
+    </fragment>
+    <fragment
+        android:id="@+id/dummy"
+        android:name="id.decloud.penjualan.fragment.Dummy"
+        android:label="Dummy" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="id.decloud.penjualan.fragment.checkout.CheckoutFragment"
+        android:label="CheckoutFragment" />
 </navigation>

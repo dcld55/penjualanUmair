@@ -4,22 +4,20 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import id.decloud.api_service.service.local.LoginDao
-import id.decloud.api_service.service.local.ProductDao
-import id.decloud.common.entity.LoginEntity
-import id.decloud.common.entity.ProductEntity
-import id.decloud.common.entity.TransactionDetailEntity
-import id.decloud.common.entity.TransactionHeaderEntity
+import id.decloud.api_service.service.local.CartDao
+import id.decloud.common.entity.room_table.CartEntity
+import id.decloud.common.entity.room_table.TransactionDetailEntity
+import id.decloud.common.entity.room_table.TransactionHeaderEntity
 
 @Database(
-    entities = [LoginEntity::class,
-        ProductEntity::class,
+    entities = [
+        CartEntity::class,
         TransactionHeaderEntity::class,
-        TransactionDetailEntity::class], version = 1, exportSchema = false
+        TransactionDetailEntity::class
+    ], version = 1, exportSchema = false
 )
 abstract class PenjualanDatabase() : RoomDatabase() {
-    abstract fun loginDao(): LoginDao
-    abstract fun productDao(): ProductDao
+    abstract fun cartDao(): CartDao
 
     companion object {
         @Volatile
@@ -29,7 +27,7 @@ abstract class PenjualanDatabase() : RoomDatabase() {
                 instance ?: Room.databaseBuilder(
                     context.applicationContext,
                     PenjualanDatabase::class.java, "penjualan.db"
-                ).build()
+                ).allowMainThreadQueries().build()
             }
     }
 

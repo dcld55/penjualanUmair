@@ -1,4 +1,4 @@
-package id.decloud.common.entity
+package id.decloud.common.entity.room_table
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

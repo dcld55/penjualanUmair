@@ -6,6 +6,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:id="@+id/progress"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -16,6 +25,7 @@
             android:id="@+id/product_recycler"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
+            android:visibility="gone"
             tools:listitem="@layout/product_list_layout_item"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -31,6 +41,7 @@
             android:paddingBottom="10dp"
             android:text="Checkout"
             android:textAllCaps="false"
+            android:visibility="gone"
             android:textColor="#ffffff"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="30dp"
