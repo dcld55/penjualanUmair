@@ -23,7 +23,13 @@ class ProductFragment : BaseFragment<ProductViewModel, ProductListLayoutFragment
         )
     }) { cart ->
 
-        vm.insertToCart(vm.userStore.value.orEmpty(), cart)
+        if(!vm.isExistInCart(vm.userStore.value.orEmpty(), cart.productCode)){
+            vm.insertToCart(vm.userStore.value.orEmpty(), cart)
+            Toast.makeText(context, "${cart.name} Is Added to Cart", 1).show()
+        } else {
+            Toast.makeText(context, "Product Is Already Exist In Cart", 1).show()
+        }
+
         vm.navigate(
             ProductFragmentDirections.toDummy()
         )
@@ -54,6 +60,7 @@ class ProductFragment : BaseFragment<ProductViewModel, ProductListLayoutFragment
                 binding.checkoutButton.visibility = View.GONE
             } else if (it.refresh is LoadState.Error && adapter.itemCount == 0) {
                 Toast.makeText(context, "Failed to Load Data", Toast.LENGTH_SHORT).show()
+                vm.popBackStack()
             } else if (it.refresh is LoadState.NotLoading && adapter.itemCount == 0) {
                 Toast.makeText(context, "Data Is Empty", Toast.LENGTH_SHORT).show()
             } else if (it.refresh is LoadState.NotLoading && adapter.itemCount != 0) {

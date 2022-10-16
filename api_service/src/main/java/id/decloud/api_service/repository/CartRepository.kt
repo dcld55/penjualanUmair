@@ -24,6 +24,10 @@ class CartRepository(
         return localdata
     }
 
+    fun isExist(user: String, productCode: String): Boolean {
+        return cartDao.isExistInCart(user,productCode)
+    }
+
     fun insertCart(cart: CartEntity) {
         appExecutors.diskIO.execute {
             cartDao.insertCart(cart)

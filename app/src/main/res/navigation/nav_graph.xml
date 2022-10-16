@@ -40,6 +40,9 @@
         android:label="DetailFragment" >
         <argument android:name="oneContent"
             app:argType="id.decloud.common.entity.api.product.Content" />
+        <action
+            android:id="@+id/detailToDummy"
+            app:destination="@id/dummy" />
     </fragment>
     <fragment
         android:id="@+id/dummy"

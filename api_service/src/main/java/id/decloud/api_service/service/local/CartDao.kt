@@ -26,9 +26,6 @@ interface CartDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertTransactionDetail(transactionDetailTable: List<TransactionDetailEntity>)
 
-//    @Query("DELETE FROM cart WHERE user=:user")
-//    fun deleteCart(user: String): Boolean
-//
-//    @Query("SELECT EXISTS(SELECT * FROM cart WHERE user=:user AND productCode=:productCode)")
-//    fun isExistInCart(user: String, productCode:String): Boolean
+    @Query("SELECT EXISTS(SELECT * FROM cart WHERE user=:user AND productCode=:productCode)")
+    fun isExistInCart(user: String, productCode:String): Boolean
 }

@@ -21,8 +21,7 @@ class ProductViewModel @Inject constructor(
     application: Application,
     private val productUseCase: ProductUseCase,
     private val dataStorePreference: DataStorePreference,
-    private val cartRepository: CartRepository,
-//    private val app:PenjualanApp
+    private val cartRepository: CartRepository
 ) : BaseViewModel(application) {
     var productLiveData = MutableLiveData<PagingData<Content>>()
     var tokenStore = MutableLiveData<String>()
@@ -36,6 +35,8 @@ class ProductViewModel @Inject constructor(
         }
 
     }
+
+
 
 
 
@@ -57,21 +58,6 @@ class ProductViewModel @Inject constructor(
 
     fun insertToCart(user: String, content: Content) {
 
-//        app.repository.insertCart(
-//            CartEntity(
-//                id = 0,
-//                user = user,
-//                currency = content.currency,
-//                dimension = content.dimension,
-//                discount = content.discount,
-//                name = content.name,
-//                price = content.price,
-//                productCode = content.productCode,
-//                unit = content.unit
-//            )
-//        )
-
-
         cartRepository.insertCart(
             CartEntity(
                 id = 0,
@@ -86,6 +72,10 @@ class ProductViewModel @Inject constructor(
                 quantity = 1
             )
         )
+    }
+
+    fun isExistInCart(user: String, productCode: String):Boolean{
+        return cartRepository.isExist(user,productCode)
     }
 
 

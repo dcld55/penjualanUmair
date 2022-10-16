@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "cart", indices = [Index(value = ["productCode"], unique = true)])
+@Entity(tableName = "cart")
 class CartEntity(
     @PrimaryKey(autoGenerate = true)
     @field:ColumnInfo(name = "id")
